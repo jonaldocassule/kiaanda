@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiaanda — O teu crescimento é a nossa missão</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #1a6b3a;
+      --green-light: #2d9b57;
+      --green-dim: rgba(26,107,58,0.12);
+      --gold: #C9A84C;
+      --gold-dim: rgba(201,168,76,0.15);
+      --bg: #f7f5f0;
+      --bg2: #edeae2;
+      --dark: #0d1f13;
+      --dark2: #162a1d;
+      --text: #0d1f13;
+      --text-muted: #5a6b61;
+      --border: rgba(26,107,58,0.15);
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3rem;
+      background: rgba(247,245,240,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    .nav-cta {
+      background: var(--green) !important;
+      color: white !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 100px;
+      font-weight: 500 !important;
+    }
+
+    .nav-cta:hover { background: var(--green-light) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 8rem 3rem 4rem;
+      position: relative;
+      overflow: hidden;
+      gap: 4rem;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #f7f5f0 0%, #e8f0eb 50%, #f7f5f0 100%);
+      z-index: 0;
+    }
+
+    .hero-circle {
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,107,58,0.08) 0%, transparent 70%);
+      top: -100px; right: -100px;
+      z-index: 0;
+    }
+
+    .hero-left { position: relative; z-index: 1; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--green-dim);
+      border: 1px solid rgba(26,107,58,0.2);
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-badge::before { content: '●'; font-size: 0.5rem; }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      animation: fadeUp 0.9s 0.1s ease both;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--green);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 460px;
+      animation: fadeUp 1s 0.2s ease both;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeUp 1.1s 0.3s ease both;
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .btn-green:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26,107,58,0.3);
+    }
+
+    .btn-outline-green {
+      border: 1.5px solid var(--green);
+      color: var(--green);
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .btn-outline-green:hover {
+      background: var(--green-dim);
+      transform: translateY(-2px);
+    }
+
+    .hero-right {
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 1s 0.2s ease both;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+    }
+
+    .hero-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+    }
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      transition: background 0.3s;
+      cursor: default;
+    }
+
+    .service-item:hover { background: var(--green-dim); }
+
+    .service-icon {
+      width: 42px; height: 42px;
+      background: var(--green-dim);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .service-name {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--dark);
+    }
+
+    .service-desc-small {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 3rem; }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 500px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── SOBRE ── */
+    #sobre {
+      background: var(--dark);
+      color: white;
+    }
+
+    #sobre .section-label { color: var(--gold); }
+    #sobre .section-title { color: white; }
+    #sobre .section-sub { color: rgba(255,255,255,0.5); }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .sobre-text p {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.9;
+    }
+
+    .sobre-text p strong { color: white; }
+
+    .sobre-values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .value-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .value-card:hover {
+      background: rgba(26,107,58,0.2);
+      border-color: rgba(26,107,58,0.4);
+    }
+
+    .value-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+
+    .value-title {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: white;
+      margin-bottom: 0.4rem;
+    }
+
+    .value-desc {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+
+    /* ── SERVIÇOS ── */
+    #servicos { background: var(--bg); }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .servico-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .servico-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), var(--green-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+
+    .servico-card:hover::before { transform: scaleX(1); }
+
+    .servico-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(26,107,58,0.1);
+      border-color: rgba(26,107,58,0.3);
+    }
+
+    .servico-icon {
+      width: 56px; height: 56px;
+      background: var(--green-dim);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .servico-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--dark);
+    }
+
+    .servico-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .servico-link {
+      font-size: 0.8rem;
+      color: var(--green);
+      font-weight: 500;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.3s;
+    }
+
+    .servico-link:hover { gap: 0.8rem; }
+
+    /* ── EQUIPA ── */
+    #equipa { background: var(--bg2); }
+
+    .equipa-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .membro-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .membro-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+    }
+
+    .membro-avatar {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 auto 1rem;
+      overflow: hidden;
+      border: 3px solid rgba(26,107,58,0.2);
+    }
+
+    .membro-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .membro-role {
+      font-size: 0.75rem;
+      color: var(--green);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .membro-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── CONTACTO ── */
+    #contacto { background: var(--dark); }
+
+    #contacto .section-label { color: var(--gold); }
+    #contacto .section-title { color: white; }
+    #contacto .section-sub { color: rgba(255,255,255,0.5); }
+
+    .contacto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contacto-info { color: white; }
+
+    .contacto-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 1.5rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s;
+    }
+
+    .contacto-item:hover {
+      background: rgba(26,107,58,0.2);
+      border-color: rgba(26,107,58,0.4);
+      transform: translateX(5px);
+    }
+
+    .contacto-icon {
+      width: 38px; height: 38px;
+      background: rgba(26,107,58,0.3);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contacto-label {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .contacto-value { font-size: 0.88rem; font-weight: 500; }
+
+    /* ── FORM ── */
+    .form-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--dark);
+      background: var(--bg);
+      transition: border-color 0.3s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green);
+      background: white;
+    }
+
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--green);
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 100px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 0.5rem;
+    }
+
+    .btn-submit:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26,107,58,0.3);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: var(--green);
+    }
+
+    .form-success .check { font-size: 3rem; margin-bottom: 1rem; }
+    .form-success h3 { font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; }
+    .form-success p { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark2);
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: white;
+    }
+
+    .footer-logo span { color: var(--gold); }
+
+    footer p {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: var(--green-light); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1rem; }
+      section { padding: 3.5rem 1.5rem; }
+      #hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; gap: 2rem; }
+      .hero-right { display: none; }
+      .sobre-grid, .contacto-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .servicos-grid { grid-template-columns: 1fr; }
+      .equipa-grid { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-logo">Kia<span>anda</span></div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#equipa">Equipa</a></li>
+      <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-circle"></div>
+    <div class="hero-left">
+      <div class="hero-badge">Luanda, Angola</div>
+      <h1 class="hero-title">O teu crescimento<br />é a nossa <em>missão.</em></h1>
+      <p class="hero-sub">Consultoria profissional, desenvolvimento digital e formação de excelência — tudo num só lugar, para impulsionar o teu negócio.</p>
+      <div class="hero-btns">
+        <a href="#contacto" class="btn-green">Pedir Orçamento</a>
+        <a href="#servicos" class="btn-outline-green">Ver Serviços</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-title">Os nossos serviços</div>
+        <div class="service-item">
+          <div class="service-icon">📊</div>
+          <div>
+            <div class="service-name">Consultoria Contabilística</div>
+            <div class="service-desc-small">Gestão financeira e fiscal</div>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🌐</div>
+          <div>
+            <div class="service-name">Desenvolvimento Web</div>
+            <div class="service-desc-small">Sites e aplicações modernas</div>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-icon">🇬🇧</div>
+          <div>
+            <div class="service-name">Inglês Profissional</div>
+            <div class="service-desc-small">Formação empresarial</div>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Serviços</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Profissionais</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Dedicação</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="section-label reveal">Sobre Nós</div>
+    <div class="sobre-grid">
+      <div class="sobre-text reveal">
+        <h2 class="section-title" style="color:white">Quem é a<br /><em style="color:var(--gold)">Kiaanda?</em></h2>
+        <p>A <strong>Kiaanda</strong> é um centro de consultoria e formação profissional baseado em Luanda, Angola. Nascemos com uma missão clara: <strong>impulsionar o crescimento</strong> de negócios e profissionais no mercado angolano.</p>
+        <p>A nossa equipa multidisciplinar combina competências em <strong>contabilidade</strong>, <strong>tecnologia</strong> e <strong>línguas</strong> para oferecer soluções completas e adaptadas à realidade local.</p>
+        <p>Acreditamos que Angola tem um potencial enorme — e estamos aqui para ajudar a concretizá-lo.</p>
+      </div>
+      <div class="sobre-values reveal" style="transition-delay:0.15s">
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <div class="value-title">Missão</div>
+          <div class="value-desc">Impulsionar o crescimento sustentável dos nossos clientes</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">👁️</div>
+          <div class="value-title">Visão</div>
+          <div class="value-desc">Ser a referência em consultoria em Angola</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">💎</div>
+          <div class="value-title">Qualidade</div>
+          <div class="value-desc">Excelência em cada serviço prestado</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <div class="value-title">Confiança</div>
+          <div class="value-desc">Parcerias sólidas baseadas em transparência</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="section-label reveal">O que oferecemos</div>
+    <h2 class="section-title reveal">Os nossos <em style="color:var(--green)">serviços</em></h2>
+    <p class="section-sub reveal">Soluções profissionais adaptadas às necessidades do mercado angolano.</p>
+    <div class="servicos-grid">
+      <div class="servico-card reveal">
+        <div class="servico-icon">📊</div>
+        <div class="servico-title">Consultoria Contabilística</div>
+        <p class="servico-desc">Apoio completo em gestão financeira, contabilidade e conformidade fiscal. Ajudamos empresas e particulares a manter as suas finanças organizadas e em conformidade com a legislação angolana.</p>
+        <a href="#contacto" class="servico-link">Saber mais →</a>
+      </div>
+      <div class="servico-card reveal" style="transition-delay:0.1s">
+        <div class="servico-icon">🌐</div>
+        <div class="servico-title">Desenvolvimento Web</div>
+        <p class="servico-desc">Criação de websites, lojas online e aplicações web modernas. Do design à programação, entregamos soluções digitais que representam o teu negócio com profissionalismo.</p>
+        <a href="#contacto" class="servico-link">Saber mais →</a>
+      </div>
+      <div class="servico-card reveal" style="transition-delay:0.2s">
+        <div class="servico-icon">🇬🇧</div>
+        <div class="servico-title">Inglês Profissional</div>
+        <p class="servico-desc">Programas de inglês orientados para o mundo empresarial. Comunicação, negociação, escrita profissional e preparação para certificações internacionais.</p>
+        <a href="#contacto" class="servico-link">Saber mais →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPA -->
+  <section id="equipa">
+    <div class="section-label reveal">As pessoas por trás</div>
+    <h2 class="section-title reveal">A nossa <em style="color:var(--green)">equipa</em></h2>
+    <p class="section-sub reveal">Quatro profissionais com competências complementares unidos por um objectivo comum.</p>
+    <div class="equipa-grid">
+      <div class="membro-card reveal">
+        <div class="membro-avatar"><img src="foto-jonaldo.jpg" alt="Jonaldo Cassule"/></div>
+        <div class="membro-name">Jonaldo Cassule</div>
+        <div class="membro-role">Co-fundador & Dev Web</div>
+        <p class="membro-desc">Empreendedor e desenvolvedor web, responsável pela estratégia digital e desenvolvimento de soluções tecnológicas.</p>
+      </div>
+      <div class="membro-card reveal" style="transition-delay:0.1s">
+        <div class="membro-avatar"><img src="foto-jesus.jpg" alt="Jesus Cassule"/></div>
+        <div class="membro-name">Jesus Cassule</div>
+        <div class="membro-role">Consultoria Financeira</div>
+        <p class="membro-desc">Contabilista experiente com empresa registada, responsável pela gestão financeira e conformidade fiscal dos nossos clientes.</p>
+      </div>
+      <div class="membro-card reveal" style="transition-delay:0.2s">
+        <div class="membro-avatar"><img src="foto-eliseu.jpg" alt="Eliseu Quiala"/></div>
+        <div class="membro-name">Eliseu Quiala</div>
+        <div class="membro-role">Desenvolvimento Web</div>
+        <p class="membro-desc">Desenvolvedor front-end experiente, especializado em interfaces modernas, responsivas e de alto desempenho.</p>
+      </div>
+      <div class="membro-card reveal" style="transition-delay:0.3s">
+        <div class="membro-avatar"><img src="foto-josias.jpg" alt="Josias Quiala"/></div>
+        <div class="membro-name">Josias Quiala</div>
+        <div class="membro-role">Formação Profissional</div>
+        <p class="membro-desc">Especialista em inglês profissional com foco em comunicação empresarial e preparação para o mercado global.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="section-label reveal">Fala connosco</div>
+    <div class="contacto-grid">
+      <div class="contacto-info reveal">
+        <h2 class="section-title">Pronto para <em style="color:var(--gold)">crescer?</em></h2>
+        <p class="section-sub">Entra em contacto e descobre como podemos ajudar o teu negócio a atingir o próximo nível.</p>
+        <a href="mailto:jonaldopedro21@gmail.com" class="contacto-item">
+          <div class="contacto-icon">✉</div>
+          <div>
+            <div class="contacto-label">Email</div>
+            <div class="contacto-value">jonaldopedro21@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://wa.me/244940040908" target="_blank" class="contacto-item">
+          <div class="contacto-icon">💬</div>
+          <div>
+            <div class="contacto-label">WhatsApp</div>
+            <div class="contacto-value">+244 940 040 908</div>
+          </div>
+        </a>
+        <a href="https://wa.me/244956412927" target="_blank" class="contacto-item">
+          <div class="contacto-icon">📞</div>
+          <div>
+            <div class="contacto-label">Telefone</div>
+            <div class="contacto-value">+244 956 412 927</div>
+          </div>
+        </a>
+        <div class="contacto-item" style="cursor:default">
+          <div class="contacto-icon">📍</div>
+          <div>
+            <div class="contacto-label">Localização</div>
+            <div class="contacto-value">Luanda, Angola</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:0.15s">
+        <div class="form-card">
+          <div class="form-title">Pedir Orçamento</div>
+          <div id="form-content">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nome</label>
+                <input type="text" id="nome" placeholder="O teu nome" />
+              </div>
+              <div class="form-group">
+                <label>Telefone</label>
+                <input type="tel" id="telefone" placeholder="+244 9XX XXX XXX" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="o.teu@email.com" />
+            </div>
+            <div class="form-group">
+              <label>Serviço de interesse</label>
+              <select id="servico">
+                <option value="">Selecciona um serviço</option>
+                <option>Consultoria Contabilística</option>
+                <option>Desenvolvimento Web</option>
+                <option>Inglês Profissional</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mensagem</label>
+              <textarea id="mensagem" placeholder="Descreve o teu projecto ou necessidade..."></textarea>
+            </div>
+            <button class="btn-submit" onclick="submitForm()">Enviar Pedido →</button>
+          </div>
+          <div class="form-success" id="form-success">
+            <div class="check">✅</div>
+            <h3>Mensagem enviada!</h3>
+            <p>Obrigado pelo contacto. Responderemos em breve.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Kia<span>anda</span></div>
+    <p>© 2025 Kiaanda · Luanda, Angola · O teu crescimento é a nossa missão</p>
+    <div class="footer-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://jonaldocassule.github.io" target="_blank">Portfólio</a>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Form submit
+    function submitForm() {
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const servico = document.getElementById('servico').value;
+
+      if (!nome || !email || !servico) {
+        alert('Por favor preenche os campos obrigatórios: Nome, Email e Serviço.');
+        return;
+      }
+
+      document.getElementById('form-content').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
