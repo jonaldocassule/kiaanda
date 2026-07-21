@@ -2,6 +2,66 @@
 // KIAANDA WEB - BUSINESS & ENGINEERING CLIENT CODE
 // ==========================================================================
 
+// ==========================================================================
+// HERO 3D — Wireframe icosaedro rotativo com parallax do rato
+// ==========================================================================
+function initHero3D() {
+  const canvas = document.getElementById('hero3d');
+  if (!canvas || typeof THREE === 'undefined') return;
+  const container = canvas.parentElement;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+  camera.position.z = 5;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  const geometry = new THREE.IcosahedronGeometry(1.8, 1);
+  const material = new THREE.MeshBasicMaterial({ color: 0x0e3c23, wireframe: true, transparent: true, opacity: 0.85 });
+  const mesh = new THREE.Mesh(geometry, material);
+  scene.add(mesh);
+
+  const geometry2 = new THREE.IcosahedronGeometry(1.2, 0);
+  const material2 = new THREE.MeshBasicMaterial({ color: 0xc5923c, wireframe: true, transparent: true, opacity: 0.4 });
+  const mesh2 = new THREE.Mesh(geometry2, material2);
+  scene.add(mesh2);
+
+  let mouseX = 0, mouseY = 0;
+  let targetRotX = 0, targetRotY = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+    mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+    targetRotY = mouseX * 0.3;
+    targetRotX = mouseY * 0.3;
+  });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    mesh.rotation.y += 0.003;
+    mesh.rotation.x += 0.001;
+    mesh2.rotation.y -= 0.002;
+    mesh2.rotation.x -= 0.0015;
+    mesh.rotation.y += (targetRotY - mesh.rotation.y) * 0.02;
+    mesh.rotation.x += (targetRotX - mesh.rotation.x) * 0.02;
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = container.clientWidth / container.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.clientWidth, container.clientHeight);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initHero3D(); // <-- não esquecer de adicionar esta linha aqui dentro
+
+  // 1. MOBILE NAVBAR MENU & ACCESSIBILITY
+  ...resto do teu código continua igual...
+
+
 (function() {
   emailjs.init('aKhzBfnlOkv5_pl6u');
 })();
