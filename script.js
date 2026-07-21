@@ -8,10 +8,12 @@
 function initHero3D() {
   const canvas = document.getElementById('hero3d');
   if (!canvas || typeof THREE === 'undefined') return;
+  
   const container = canvas.parentElement;
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
   camera.position.z = 5;
+  
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -55,18 +57,16 @@ function initHero3D() {
   });
 }
 
+// ==========================================================================
+// INICIALIZAÇÃO GERAL (Tudo junto e organizado para evitar erros de fechamento)
+// ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Inicializa o efeito 3D
+  
+  // 1. Inicializa o efeito 3D e o EmailJS
   initHero3D(); 
-
-  // 2. Inicializa o EmailJS (não precisa daquela função extra, pode chamar direto)
   emailjs.init('aKhzBfnlOkv5_pl6u');
-  
-}); 
 
-document.addEventListener('DOMContentLoaded', () => {
-  
-  // 1. MOBILE NAVBAR MENU & ACCESSIBILITY
+  // 2. MOBILE NAVBAR MENU & ACCESSIBILITY
   const hamburger = document.getElementById('hamburger');
   const navLinksList = document.getElementById('nav-links');
   const header = document.querySelector('header');
@@ -94,10 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
-  // 2. SCROLL REVEAL OBSERVER
+  // 3. SCROLL REVEAL OBSERVER
   const reveals = document.querySelectorAll('.reveal');
-  
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -105,17 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
-  });
-
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
   reveals.forEach(el => revealObserver.observe(el));
 
-
-  // 3. STATS COUNT-UP
+  // 4. STATS COUNT-UP
   const statNumbers = document.querySelectorAll('.stat-num');
-  
   const animateStats = (element) => {
     const target = parseInt(element.getAttribute('data-target'), 10);
     const duration = 1500;
@@ -126,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const progress = Math.min(elapsed / duration, 1);
       const easeProgress = progress * (2 - progress);
       const currentValue = Math.floor(easeProgress * target);
-      
       element.textContent = currentValue;
 
       if (progress < 1) {
@@ -135,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
         element.textContent = target;
       }
     };
-
     requestAnimationFrame(updateCount);
   };
 
@@ -147,11 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { threshold: 0.5 });
-
   statNumbers.forEach(stat => statsObserver.observe(stat));
 
-
-  // 4. PORTFOLIO FILTER
+  // 5. PORTFOLIO FILTER
   const filterBtns = document.querySelectorAll('.filter-btn');
   const portfolioCards = document.querySelectorAll('.portfolio-card');
 
@@ -168,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       portfolioCards.forEach(card => {
         const category = card.getAttribute('data-category');
-        
         if (filterValue === 'all' || category === filterValue) {
           card.classList.remove('fade-out');
           card.classList.add('fade-in');
@@ -180,8 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
-  // 5. TESTIMONIALS SLIDER
+  // 6. TESTIMONIALS SLIDER
   const slider = document.getElementById('testemunhosSlider');
   const prevBtn = document.getElementById('prevSlide');
   const nextBtn = document.getElementById('nextSlide');
@@ -220,10 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.addEventListener('click', resetSliderTimer);
   }
 
-
-  // 6. FAQ ACCORDION
+  // 7. FAQ ACCORDION
   const faqQuestions = document.querySelectorAll('.faq-question');
-
   faqQuestions.forEach(question => {
     question.addEventListener('click', () => {
       const faqItem = question.parentElement;
@@ -243,8 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
-  // 7. BUDGET CALCULATOR
+  // 8. BUDGET CALCULATOR
   const calculatorForm = document.getElementById('calculatorForm');
   const simService = document.getElementById('sim-service');
   const calcPrice = document.getElementById('calcPrice');
@@ -255,7 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const selectedOption = simService.options[simService.selectedIndex];
     const baseCost = parseFloat(selectedOption.getAttribute('data-base'));
-
     const selectedSize = document.querySelector('input[name="projectSize"]:checked');
     const multiplier = selectedSize ? parseFloat(selectedSize.getAttribute('data-multiplier')) : 1.0;
 
@@ -265,8 +247,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const total = (baseCost * multiplier) + extrasCost;
-
     calcPrice.textContent = total.toLocaleString('pt-AO') + ' AOA';
+    
     return {
       service: selectedOption.textContent,
       size: selectedSize ? selectedSize.parentElement.querySelector('strong').textContent : 'Padrão',
@@ -320,7 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' });
-        
         setTimeout(() => {
           if (contactMessage) {
             contactMessage.focus();
@@ -332,8 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
-  // 8. SECURE CONTACT FORM
+  // 9. SECURE CONTACT FORM
   const contactForm = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
   const btnSubmitForm = document.getElementById('btnSubmitForm');
@@ -355,7 +335,6 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Honeypot check
       const honeypotField = document.getElementById('form_address').value;
       if (honeypotField.length > 0) {
         console.warn('Spam submission detected by Honeypot.');
@@ -418,4 +397,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
+
+}); // <-- FECHAMENTO FINAL PERFEITO DO DOMCONTENTLOADED
