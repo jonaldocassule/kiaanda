@@ -3,46 +3,46 @@
    ========================================================================== */
 
 :root {
-  /* Color Palette */
+  /* Marca (mantida do logotipo) */
   --green: #0e3c23;
   --green-light: #165b35;
   --green-accent: #2e9e5d;
-  --green-dim: rgba(14, 60, 35, 0.08);
-  --green-dim-strong: rgba(14, 60, 35, 0.18);
-  
+  --green-dim: rgba(14, 60, 35, 0.05);
+  --green-dim-strong: rgba(14, 60, 35, 0.1);
+
   --gold: #c5923c;
   --gold-light: #d8aa58;
-  --gold-dim: rgba(197, 146, 60, 0.15);
-  --gold-dim-strong: rgba(197, 146, 60, 0.28);
+  --gold-dim: rgba(197, 146, 60, 0.1);
+  --gold-dim-strong: rgba(197, 146, 60, 0.2);
 
-  --bg: #faf9f5;
-  --bg-darker: #f3f0e6;
-  --bg-dark-section: #0a2516;
-  --bg-dark-card: #113420;
-  
+  /* Fundo claro moderno (estilo Apple) */
+  --bg: #fafafa;
+  --bg-darker: #f0f0f2;
+  --bg-dark-section: #111113;
+  --bg-dark-card: #1a1a1d;
+
   --white: #ffffff;
-  --text-dark: #0e1e14;
-  --text-muted: #53645b;
-  --text-light: #f5f8f6;
-  --text-light-muted: rgba(245, 248, 246, 0.7);
+  --text-dark: #1d1d1f;
+  --text-muted: #6e6e73;
+  --text-light: #f5f5f7;
+  --text-light-muted: rgba(245, 245, 247, 0.7);
 
-  --border: rgba(14, 60, 35, 0.12);
+  --border: rgba(0, 0, 0, 0.08);
   --border-gold: rgba(197, 146, 60, 0.25);
-  
-  /* Shadows & Radii */
-  --shadow-sm: 0 2px 8px rgba(14, 60, 35, 0.04);
-  --shadow-md: 0 10px 30px rgba(14, 60, 35, 0.06);
-  --shadow-lg: 0 20px 50px rgba(14, 60, 35, 0.1);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.08);
   --shadow-gold: 0 12px 35px rgba(197, 146, 60, 0.15);
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-full: 100px;
-  
-  /* Font Families */
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'DM Sans', sans-serif;
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
+
 
 *, *::before, *::after {
   box-sizing: border-box;
