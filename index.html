@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KIAANDA001"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KIAANDA001');
+  </script>
+
+  <!-- Security Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com https://*.google-analytics.com https://stats.g.doubleclick.net;" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- SEO & Meta Tags -->
+  <title>Kiaanda — O teu crescimento é a nossa missão</title>
+  <meta name="description" content="Kiaanda - Centro de Consultoria em Contabilidade e TI. Soluções profissionais em consultoria contabilística, desenvolvimento web e formação profissional em Luanda, Angola." />
+  <meta name="keywords" content="consultoria contabilística, desenvolvimento web, contabilidade Angola, consultoria TI, formação profissional, Luanda" />
+  <meta name="author" content="Kiaanda" />
+  <meta name="theme-color" content="#0e3c23" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kiaanda — O teu crescimento é a nossa missão" />
+  <meta property="og:description" content="Centro de consultoria em contabilidade e TI com serviços profissionais em Luanda, Angola." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kiaanda.github.io" />
+  <meta property="og:image" content="https://kiaanda.github.io/og-image.jpg" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kiaanda — Centro de Consultoria Profissional" />
+  <meta name="twitter:description" content="Consultoria contabilística, desenvolvimento web e formação profissional em Luanda, Angola." />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://kiaanda.github.io" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e3c23'/><text y='65' x='20' font-family='serif' font-size='60' font-weight='bold' fill='%23c5923c'>K</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
+
+  <!-- Schema Org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kiaanda",
+    "url": "https://kiaanda.github.io",
+    "logo": "https://kiaanda.github.io/logo.png",
+    "description": "Centro de consultoria em contabilidade e TI em Luanda, Angola",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Luanda",
+      "addressCountry": "AO"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "jonaldopedro21@gmail.com",
+      "telephone": "+244 940 040 908"
+    },
+    "sameAs": [
+      "https://jonaldocassule.github.io",
+      "https://linkedin.com/company/kiaanda"
+    ],
+    "serviceArea": "AO"
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav id="navbar" aria-label="Navegação Principal">
+      <a href="#hero" class="nav-logo" id="logo-link">
+        Kia<span>anda</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir Menu de Navegação">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#simulador">Orçamento</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#equipa">Equipa</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-circle"></div>
+        <div class="hero-grid-pattern"></div>
+      </div>
+      <div class="hero-container">
+        <div class="hero-left">
+          <div class="hero-badge reveal">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Consultoria de TI & Contabilidade</span>
+          </div>
+          <h1 class="hero-title reveal">
+            O teu <em>crescimento</em> é a nossa missão.
+          </h1>
+          <p class="hero-sub reveal">
+            Soluções corporativas completas em tecnologia, gestão financeira e formação para impulsionar negócios no mercado angolano com excelência e segurança.
+          </p>
+          <div class="hero-btns reveal">
+            <a href="#contacto" class="btn btn-green">Pedir Orçamento</a>
+            <a href="#simulador" class="btn btn-outline-green">Simulador de Custos</a>
+          </div>
+          
+          <!-- STATS SECTION -->
+          <div class="stats-section reveal">
+            <div class="stat">
+              <span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Clientes</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="150">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projectos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Anos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="4">0</span>
+              <span class="stat-label">Especialistas</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right reveal">
+          <div class="hero-visual-card">
+            <div class="card-glow"></div>
+            <div class="tech-graphic">
+              <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="200" cy="200" r="140" stroke="var(--gold-dim)" stroke-width="1.5" stroke-dasharray="5 5"/>
+                <circle cx="200" cy="200" r="90" stroke="var(--green-dim)" stroke-width="2"/>
+                <path d="M200 40v320M40 200h320" stroke="var(--border)" stroke-width="1"/>
+                <rect x="150" y="150" width="100" height="100" rx="15" fill="rgba(14,60,35,0.8)" stroke="var(--gold)" stroke-width="2" />
+                <path d="M180 185h40M180 200h40M180 215h20" stroke="var(--gold)" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="90" cy="140" r="8" fill="var(--green)" />
+                <circle cx="310" cy="260" r="6" fill="var(--gold)" />
+                <circle cx="200" cy="40" r="5" fill="var(--green)" />
+                <circle cx="200" cy="360" r="5" fill="var(--gold)" />
+              </svg>
+            </div>
+            <div class="floating-alert">
+              <div class="alert-icon">✓</div>
+              <div class="alert-text">
+                <strong>Infraestrutura Segura</strong>
+                <span>SSL & Proteção de Dados</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="services">
+      <div class="section-label reveal">O que oferecemos</div>
+      <h2 class="section-title reveal">Os nossos <em class="accent-text">serviços</em></h2>
+      <p class="section-sub reveal">Soluções integradas e completas desenhadas por especialistas para a realidade do mercado angolano.</p>
+      
+      <div class="servicos-grid">
+        <article class="servico-card reveal">
+          <div class="servico-header">
+            <div class="servico-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="servico-title">Consultoria Contabilística</h3>
+          </div>
+          <p class="servico-desc">Apoio completo em gestão financeira, contabilidade geral e analítica, assessoria fiscal e conformidade fiscal. Mantemos o seu negócio em total alinhamento com a legislação angolana (AGT).</p>
+          <ul class="servico-features">
+            <li>Declarações Fiscais e IVA</li>
+            <li>Processamento de Salários</li>
+            <li>Relatórios de Auditoria Interna</li>
+          </ul>
+          <a href="#contacto" class="servico-link">Solicitar serviço <span>→</span></a>
+        </article>
+
+        <article class="servico-card reveal">
+          <div class="servico-header">
+            <div class="servico-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+                <line x1="14" y1="4" x2="10" y2="20"></line>
+              </svg>
+            </div>
+            <h3 class="servico-title">Desenvolvimento Web & TI</h3>
+          </div>
+          <p class="servico-desc">Programação de plataformas web robustas, websites institucionais rápidos e e-commerces seguros. Garantimos que os seus sistemas sejam blindados contra falhas e rápidos em qualquer dispositivo.</p>
+          <ul class="servico-features">
+            <li>Sistemas corporativos customizados</li>
+            <li>Hospedagem segura e otimizada</li>
+            <li>Auditorias de segurança (Pentests)</li>
+          </ul>
+          <a href="#contacto" class="servico-link">Solicitar serviço <span>→</span></a>
+        </article>
+
+        <article class="servico-card reveal">
+          <div class="servico-header">
+            <div class="servico-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="servico-title">Inglês Profissional</h3>
+          </div>
+          <p class="servico-desc">Capacitação em inglês orientada para o ambiente corporativo e negócios. Prepare a sua equipa para apresentações, negociações globais e comunicação técnica com parceiros internacionais.</p>
+          <ul class="servico-features">
+            <li>Inglês para Executivos & TI</li>
+            <li>Simulações de Negociações</li>
+            <li>Escrita profissional e relatórios</li>
+          </ul>
+          <a href="#contacto" class="servico-link">Solicitar serviço <span>→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SIMULADOR DE ORÇAMENTO -->
+    <section id="simulador" class="simulador-section">
+      <div class="simulador-container">
+        <div class="simulador-info reveal">
+          <div class="section-label">Planeamento Digital</div>
+          <h2 class="section-title text-light">Simulador de <em class="accent-text-gold">Orçamento</em></h2>
+          <p class="simulador-intro">
+            Sabemos que transparência é vital. Utilize a nossa calculadora interativa de serviços para obter uma estimativa de custos para o seu projeto com valores ajustados ao mercado de Luanda.
+          </p>
+          <div class="simulador-badge">
+            <div class="badge-dot"></div>
+            <span>Valores estimados em Kwanza (AOA)</span>
+          </div>
+        </div>
+        
+        <div class="simulador-card reveal">
+          <div class="simulador-body">
+            <form id="calculatorForm">
+              <div class="sim-group">
+                <label for="sim-service">Tipo de Serviço</label>
+                <select id="sim-service" class="sim-select">
+                  <option value="web" data-base="350000">Desenvolvimento Web / TI</option>
+                  <option value="contabilidade" data-base="150000">Assessoria de Contabilidade (Mensal)</option>
+                  <option value="ingles" data-base="80000">Formação de Inglês (Por aluno)</option>
+                  <option value="combo" data-base="450000">Combo Completo (Web + Finanças)</option>
+                </select>
+              </div>
+
+              <div class="sim-group">
+                <label>Tamanho do Projeto / Empresa</label>
+                <div class="sim-radios">
+                  <label class="sim-radio-label">
+                    <input type="radio" name="projectSize" value="small" checked data-multiplier="1.0">
+                    <span class="sim-radio-btn"></span>
+                    <div>
+                      <strong>Micro / Startup</strong>
+                      <span>Processos simples e páginas estáticas</span>
+                    </div>
+                  </label>
+                  <label class="sim-radio-label">
+                    <input type="radio" name="projectSize" value="medium" data-multiplier="1.5">
+                    <span class="sim-radio-btn"></span>
+                    <div>
+                      <strong>PME / Médio</strong>
+                      <span>Funcionalidades integradas e segurança média</span>
+                    </div>
+                  </label>
+                  <label class="sim-radio-label">
+                    <input type="radio" name="projectSize" value="large" data-multiplier="2.5">
+                    <span class="sim-radio-btn"></span>
+                    <div>
+                      <strong>Grande Empresa</strong>
+                      <span>Arquiteturas complexas e bases dedicadas</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="sim-group">
+                <label>Recursos Opcionais</label>
+                <div class="sim-checkboxes">
+                  <label class="sim-check-label">
+                    <input type="checkbox" class="sim-extra" value="suporte" data-cost="50000">
+                    <span class="sim-check-btn"></span>
+                    <span>Manutenção e Suporte Mensal (+50.000 AOA)</span>
+                  </label>
+                  <label class="sim-check-label">
+                    <input type="checkbox" class="sim-extra" value="seguranca" data-cost="80000">
+                    <span class="sim-check-btn"></span>
+                    <span>Auditoria de Segurança Extra (+80.000 AOA)</span>
+                  </label>
+                  <label class="sim-check-label">
+                    <input type="checkbox" class="sim-extra" value="urgente" data-cost="100000">
+                    <span class="sim-check-btn"></span>
+                    <span>Entrega Prioritária / Urgente (+100.000 AOA)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="sim-result-box">
+                <div class="result-title">Estimativa de Investimento</div>
+                <div class="result-value" id="calcPrice">350.000 AOA</div>
+                <div class="result-disclaimer">Nota: Os preços finais podem variar após análise técnica formal dos requisitos.</div>
+              </div>
+
+              <button type="button" class="btn btn-green btn-block" id="btnApplyCalc">
+                Aplicar Orçamento no Contacto
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="sobre">
+      <div class="sobre-container">
+        <div class="sobre-content reveal">
+          <div class="section-label">Sobre a Kiaanda</div>
+          <h2 class="section-title">Quem é a <em class="accent-text">Kiaanda?</em></h2>
+          <p class="sobre-text">
+            Sediada em Luanda, a <strong>Kiaanda</strong> é um centro moderno de consultoria corporativa e formação profissional. Desenvolvemos estratégias sob medida combinando <strong>tecnologia resiliente</strong>, <strong>contabilidade estratégica</strong> e <strong>fluência idiomática</strong> para preparar empresas para o mercado nacional e global.
+          </p>
+          <p class="sobre-text">
+            Sob a nossa ótica de engenharia crítica, a tecnologia e a finança não trabalham em silos. Ajudamos a fundar as bases digitais e fiscais dos nossos parceiros, focando no seu crescimento seguro e sustentável.
+          </p>
+          
+          <div class="sobre-values">
+            <div class="value-card">
+              <div class="value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              </div>
+              <h4 class="value-title">Missão</h4>
+              <p class="value-desc">Elevar a maturidade operacional e digital dos negócios em Angola.</p>
+            </div>
+            
+            <div class="value-card">
+              <div class="value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </div>
+              <h4 class="value-title">Visão</h4>
+              <p class="value-desc">Ser a consultoria de referência integrada em soluções de TI e finanças.</p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h4 class="value-title">Qualidade</h4>
+              <p class="value-desc">Proteger os dados corporativos e aplicar rigor analítico extremo.</p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h4 class="value-title">Confiança</h4>
+              <p class="value-desc">Transparência nas auditorias e relações comerciais duradouras.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPA -->
+    <section id="equipa" class="equipa-section">
+      <div class="section-label reveal">As mentes técnicas</div>
+      <h2 class="section-title reveal">A nossa <em class="accent-text">equipa</em></h2>
+      <p class="section-sub reveal">Profissionais altamente capacitados e especializados, assegurando os mais altos níveis de qualidade técnica.</p>
+      
+      <div class="equipa-grid">
+        <article class="membro-card reveal">
+          <div class="membro-header-visual">
+            <div class="membro-badge">Dev Web</div>
+            <div class="membro-avatar">JC</div>
+          </div>
+          <div class="membro-body">
+            <h3 class="membro-name">Jonaldo Cassule</h3>
+            <p class="membro-role">Co-fundador & Tech Lead</p>
+            <p class="membro-desc">Especializado em arquitetura de sistemas seguros e estratégias de infraestrutura em cloud computing.</p>
+          </div>
+        </article>
+
+        <article class="membro-card reveal">
+          <div class="membro-header-visual">
+            <div class="membro-badge">Finanças</div>
+            <div class="membro-avatar">JC</div>
+          </div>
+          <div class="membro-body">
+            <h3 class="membro-name">Jesus Cassule</h3>
+            <p class="membro-role">Co-fundador & Auditor Fiscal</p>
+            <p class="membro-desc">Contabilista certificado responsável pela governança de finanças corporativas e planeamento tributário.</p>
+          </div>
+        </article>
+
+        <article class="membro-card reveal">
+          <div class="membro-header-visual">
+            <div class="membro-badge">Front-End</div>
+            <div class="membro-avatar">EQ</div>
+          </div>
+          <div class="membro-body">
+            <h3 class="membro-name">Eliseu Quiala</h3>
+            <p class="membro-role">Senior UI Engineer</p>
+            <p class="membro-desc">Codifica interfaces modernas, rápidas e focadas na melhor usabilidade e design responsivo.</p>
+          </div>
+        </article>
+
+        <article class="membro-card reveal">
+          <div class="membro-header-visual">
+            <div class="membro-badge">Negócios</div>
+            <div class="membro-avatar">JQ</div>
+          </div>
+          <div class="membro-body">
+            <h3 class="membro-name">Josias Quiala</h3>
+            <p class="membro-role">Business Communication Coach</p>
+            <p class="membro-desc">Especialista em inglês técnico, preparando líderes locais para interações corporativas internacionais.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTEMUNHOS -->
+    <section id="testemunhos" class="testemunhos-section">
+      <div class="section-label reveal">Quem confia em nós</div>
+      <h2 class="section-title reveal">Depoimentos de <em class="accent-text">parceiros</em></h2>
+      <p class="section-sub reveal">Veja como as nossas soluções de engenharia e contabilidade impactaram negócios.</p>
+
+      <div class="testemunhos-container reveal">
+        <div class="testemunhos-slider" id="testemunhosSlider">
+          <div class="testemunho-card">
+            <div class="testemunho-rating" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+            <p class="testemunho-text">
+              "A Kiaanda reestruturou a nossa base fiscal e financeira de forma impecável. A nossa empresa passou a operar com total clareza contábil perante a AGT."
+            </p>
+            <div class="testemunho-author">
+              <div class="author-avatar">MC</div>
+              <div class="author-info">
+                <h4>Maria Correia</h4>
+                <span>Diretora Geral, Correia Logística</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testemunho-card">
+            <div class="testemunho-rating" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+            <p class="testemunho-text">
+              "O website corporativo que eles programaram para nós é extremamente veloz e trouxe um aumento considerável nas nossas conversões digitais imediatas."
+            </p>
+            <div class="testemunho-author">
+              <div class="author-avatar">JC</div>
+              <div class="author-info">
+                <h4>João Costa</h4>
+                <span>Fundador, Costa & Filhos S.A.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testemunho-card">
+            <div class="testemunho-rating" aria-label="Avaliação: 5 estrelas">★★★★★</div>
+            <p class="testemunho-text">
+              "O treinamento de inglês corporativo ministrado para a nossa equipe técnica de infraestrutura facilitou o suporte com fornecedores em Singapura."
+            </p>
+            <div class="testemunho-author">
+              <div class="author-avatar">AS</div>
+              <div class="author-info">
+                <h4>Ana Silva</h4>
+                <span>Head de Pessoas, Silva & Associados</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button id="prevSlide" class="btn-slider" aria-label="Depoimento Anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          </button>
+          <button id="nextSlide" class="btn-slider" aria-label="Próximo Depoimento">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="section-label reveal">Resumo das nossas entregas</div>
+      <h2 class="section-title reveal">Portfólio de <em class="accent-text">projetos</em></h2>
+      <p class="section-sub reveal">Explore as soluções de TI e contabilidade que implementamos com sucesso.</p>
+
+      <div class="portfolio-filters reveal" role="tablist" aria-label="Filtrar projetos">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Desenvolvimento Web</button>
+        <button class="filter-btn" data-filter="contabilidade" role="tab" aria-selected="false">Contabilidade</button>
+        <button class="filter-btn" data-filter="ingles" role="tab" aria-selected="false">Inglês Corporativo</button>
+      </div>
+
+      <div class="portfolio-grid reveal">
+        <article class="portfolio-card" data-category="web">
+          <div class="portfolio-visual" aria-hidden="true">
+            <div class="portfolio-overlay-logo">🌐</div>
+            <div class="portfolio-badge">TI & Web</div>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-card-title">E-commerce de Alta Performance</h3>
+            <p class="portfolio-card-desc">Desenvolvimento de plataforma de vendas escalável com integrações locais de faturação e gateways de pagamento seguros.</p>
+            <a href="#contacto" class="portfolio-card-link">Ver Detalhes <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="contabilidade">
+          <div class="portfolio-visual" aria-hidden="true">
+            <div class="portfolio-overlay-logo">📊</div>
+            <div class="portfolio-badge">Finanças</div>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-card-title">Sistema de Auditoria Integrado</h3>
+            <p class="portfolio-card-desc">Configuração contábil e estruturação do módulo de auditoria fiscal eletrónica para conciliação bancária de grandes importadores.</p>
+            <a href="#contacto" class="portfolio-card-link">Ver Detalhes <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="ingles">
+          <div class="portfolio-visual" aria-hidden="true">
+            <div class="portfolio-overlay-logo">🇬🇧</div>
+            <div class="portfolio-badge">Formação</div>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-card-title">Inglês Técnico para Engenheiros</h3>
+            <p class="portfolio-card-desc">Programa corporativo intensivo para capacitar engenheiros de rede na redação de documentações e reuniões internacionais.</p>
+            <a href="#contacto" class="portfolio-card-link">Ver Detalhes <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="web">
+          <div class="portfolio-visual" aria-hidden="true">
+            <div class="portfolio-overlay-logo">💼</div>
+            <div class="portfolio-badge">TI & Web</div>
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-card-title">Portfólio Profissional Customizado</h3>
+            <p class="portfolio-card-desc">Website estático otimizado e focado em alta velocidade de carregamento (Core Web Vitals) para consultoria.</p>
+            <a href="https://jonaldocassule.github.io" target="_blank" rel="noopener noreferrer" class="portfolio-card-link">Visitar Site <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq-section">
+      <div class="section-label reveal">Esclarecimentos rápidos</div>
+      <h2 class="section-title reveal">Perguntas <em class="accent-text">frequentes</em></h2>
+      <p class="section-sub reveal">Consulte as principais dúvidas sobre os nossos fluxos de atendimento e consultoria.</p>
+
+      <div class="faq-accordion reveal">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-1">
+            <span>Qual é o tempo médio de resposta da Kiaanda?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-ans-1" class="faq-answer" role="region">
+            <p>Garantimos uma resposta técnica preliminar em até 24 horas úteis. Casos de urgência crítica de infraestrutura ou auditoria fiscal podem ser canalizados diretamente para o nosso canal seguro de suporte no WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-2">
+            <span>Qual é o custo dos vossos serviços?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-ans-2" class="faq-answer" role="region">
+            <p>O custo depende da dimensão e especificidades de cada projeto. Fornecemos orçamentos sob medida. Pode ter uma estimativa preliminar usando o nosso simulador nesta página e enviá-la para análise direta da equipe.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-3">
+            <span>Oferecem suporte de manutenção contínua após a entrega?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-ans-3" class="faq-answer" role="region">
+            <p>Sim. Disponibilizamos contratos mensais de suporte (SLA) para garantir que seus servidores, sites ou rotinas de contabilidade estejam sempre seguros e atualizados.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-4">
+            <span>A Kiaanda opera apenas em Luanda ou também noutras províncias?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-ans-4" class="faq-answer" role="region">
+            <p>Embora tenhamos sede em Luanda, os nossos serviços de engenharia web, consultoria fiscal e formação são prestados em formato híbrido ou totalmente remoto para clientes em todo o território de Angola e no estrangeiro.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-5">
+            <span>Como posso acompanhar as etapas do meu projeto?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div id="faq-ans-5" class="faq-answer" role="region">
+            <p>Usamos ferramentas de gestão ágil. Enviamos relatórios regulares e permitimos o acompanhamento dos marcos técnicos por meio de chamadas de alinhamento quinzenais ou via WhatsApp direto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section id="blog" class="blog-section">
+      <div class="section-label reveal">Conhecimento Técnico</div>
+      <h2 class="section-title reveal">Blog da <em class="accent-text">Kiaanda</em></h2>
+      <p class="section-sub reveal">Aprenda a melhorar os processos da sua empresa com as dicas dos nossos especialistas.</p>
+
+      <div class="blog-grid reveal">
+        <article class="blog-card">
+          <div class="blog-visual" aria-hidden="true">
+            <span>📊</span>
+          </div>
+          <div class="blog-info">
+            <span class="blog-date">15 de Julho, 2026</span>
+            <h3 class="blog-title">5 Dicas Cruciais para a Organização Financeira PME</h3>
+            <p class="blog-desc">Aprenda a gerir o fluxo de caixa da sua empresa de forma preventiva e evite as principais falhas nas auditorias da AGT.</p>
+            <a href="#contacto" class="blog-card-link">Ler artigo completo <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-visual" aria-hidden="true">
+            <span>🔒</span>
+          </div>
+          <div class="blog-info">
+            <span class="blog-date">10 de Julho, 2026</span>
+            <h3 class="blog-title">Transformação Digital Segura: Por Onde Iniciar?</h3>
+            <p class="blog-desc">Identifique vulnerabilidades nos sistemas internos e descubra como a migração para a cloud pode proteger os dados críticos corporativos.</p>
+            <a href="#contacto" class="blog-card-link">Ler artigo completo <span>→</span></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-visual" aria-hidden="true">
+            <span>🇬🇧</span>
+          </div>
+          <div class="blog-info">
+            <span class="blog-date">05 de Julho, 2026</span>
+            <h3 class="blog-title">O Impacto do Inglês de TI no Suporte Técnico</h3>
+            <p class="blog-desc">Por que a fluência em termos de engenharia de rede abre portas internacionais e poupa tempo em chamados críticos globais.</p>
+            <a href="#contacto" class="blog-card-link">Ler artigo completo <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto-section">
+      <div class="contacto-container">
+        <div class="contacto-info reveal">
+          <div class="section-label">Canal Seguro</div>
+          <h2 class="section-title text-light">Pronto para <em class="accent-text-gold">crescer?</em></h2>
+          <p class="contacto-sub text-light">
+            Instancie um diálogo direto e seguro com o nosso time para agendar a sua auditoria fiscal ou técnica.
+          </p>
+
+          <div class="contacto-links">
+            <a href="mailto:jonaldopedro21@gmail.com" class="contacto-link-item">
+              <div class="link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <span class="link-label">E-mail Corporativo</span>
+                <span class="link-value">jonaldopedro21@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/244940040908" target="_blank" rel="noopener noreferrer" class="contacto-link-item">
+              <div class="link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              </div>
+              <div>
+                <span class="link-label">WhatsApp Geral</span>
+                <span class="link-value">+244 940 040 908</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/244956412927" target="_blank" rel="noopener noreferrer" class="contacto-link-item">
+              <div class="link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              </div>
+              <div>
+                <span class="link-label">WhatsApp Suporte</span>
+                <span class="link-value">+244 956 412 927</span>
+              </div>
+            </a>
+
+            <div class="contacto-link-item cursor-default">
+              <div class="link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <span class="link-label">Localização</span>
+                <span class="link-value">Luanda, Angola</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-container reveal">
+          <div class="form-card">
+            <h3 class="form-header-title">Transmissão de Orçamento</h3>
+            <div id="formStatus" class="form-status" role="alert"></div>
+            <form id="contactForm" autocomplete="on">
+              <div class="form-group-hp" aria-hidden="true">
+                <label for="form_address">Endereço Alternativo</label>
+                <input type="text" id="form_address" name="form_address" autocomplete="off" placeholder="Não preencher" tabindex="-1" />
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="nome">Nome Completo *</label>
+                  <input type="text" id="nome" name="nome" placeholder="O seu nome" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="telefone">Telefone (Angola) *</label>
+                  <input type="tel" id="telefone" name="telefone" placeholder="9XXXXXXXX" required pattern="^(\+244|00244)?[9][1-9][0-9]{7}$" title="Formato de telefone angolano válido (Ex: 923123456 ou +244923123456)" autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail de Retorno *</label>
+                <input type="email" id="email" name="email" placeholder="nome@empresa.com" required autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="servico">Serviço Pretendido *</label>
+                <select id="servico" name="servico" required>
+                  <option value="">Selecione um serviço</option>
+                  <option value="Consultoria Contabilística">Consultoria Contabilística</option>
+                  <option value="Desenvolvimento Web / TI">Desenvolvimento Web / TI</option>
+                  <option value="Inglês Profissional">Inglês Profissional</option>
+                  <option value="Outro">Outro Assunto</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem">Detalhes do Projeto / Mensagem *</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Descreva os requisitos técnicos ou financeiros do seu projeto..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-green btn-block btn-submit" id="btnSubmitForm">
+                <span>Enviar Solicitação Segura</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo">Kia<span>anda</span></span>
+        <p class="footer-tagline">Construindo as bases de tecnologia e governança para a sua expansão corporativa.</p>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/company/kiaanda" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Kiaanda">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="https://github.com/kiaanda" target="_blank" rel="noopener noreferrer" aria-label="GitHub da Kiaanda">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-links-grid">
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#simulador">Orçamento</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <ul>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#faq">Dúvidas Frequentes</a></li>
+            <li><a href="#blog">Blog & Insights</a></li>
+            <li><a href="https://jonaldocassule.github.io" target="_blank" rel="noopener noreferrer">Portfólio Jonaldo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kiaanda. Todos os direitos reservados. Governança Corporativa e Defesa de Dados.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/244940040908?text=Ol%C3%A1%20Kiaanda%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20de%20or%C3%A7amento." class="whatsapp-floating" target="_blank" rel="noopener noreferrer" aria-label="Contactar Kiaanda pelo WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
