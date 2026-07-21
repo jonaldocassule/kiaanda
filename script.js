@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHero3D(); // <-- não esquecer de adicionar esta linha aqui dentro
 
   
-  ...resto do teu código continua igual...
 
 
 (function() {
