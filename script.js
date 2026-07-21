@@ -56,14 +56,13 @@ function initHero3D() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  initHero3D(); // <-- não esquecer de adicionar esta linha aqui dentro
+  // 1. Inicializa o efeito 3D
+  initHero3D(); 
 
-  
-
-
-(function() {
+  // 2. Inicializa o EmailJS (não precisa daquela função extra, pode chamar direto)
   emailjs.init('aKhzBfnlOkv5_pl6u');
-})();
+  
+}); 
 
 document.addEventListener('DOMContentLoaded', () => {
   
