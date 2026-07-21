@@ -58,7 +58,7 @@ function initHero3D() {
 document.addEventListener('DOMContentLoaded', () => {
   initHero3D(); // <-- não esquecer de adicionar esta linha aqui dentro
 
-  // 1. MOBILE NAVBAR MENU & ACCESSIBILITY
+  
   ...resto do teu código continua igual...
 
 
